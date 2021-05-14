@@ -1,8 +1,14 @@
-import { ADD_MOVIES, ADD_FAVOURITE, REMOVE_FROM_FAV } from "../actions";
+import {
+  ADD_MOVIES,
+  ADD_FAVOURITE,
+  REMOVE_FROM_FAV,
+  SHOW_FAV,
+} from "../actions";
 
 const initialMovieState = {
   list: [],
   favourites: [],
+  showFav: false,
 };
 export default function movies(state = initialMovieState, action) {
   // if (action.type === ADD_MOVIES) {
@@ -31,6 +37,11 @@ export default function movies(state = initialMovieState, action) {
       return {
         ...state,
         favourites: filteredArray,
+      };
+    case SHOW_FAV:
+      return {
+        ...state,
+        showFav: action.val,
       };
     default:
       return state;
