@@ -1,6 +1,6 @@
 import React from "react";
 
-import { handleMovieSearch, addMovieToList } from "../actions";
+import { handleMovieSearch, handleAddMovieToList } from "../actions";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Navbar extends React.Component {
     };
   }
   handleAddToMovies = (movie) => {
-    this.props.dispatch(addMovieToList(movie));
+    this.props.dispatch(handleAddMovieToList(movie.imdbID));
     this.setState({
       showSearchResults: false,
     });

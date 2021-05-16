@@ -34,6 +34,20 @@ export function setShowFav(val) {
   };
 }
 
+export function handleAddMovieToList(id) {
+  console.log(id);
+  const url = `http://www.omdbapi.com/?apikey=205c172a&i=${id}`;
+  return function (dispatch) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((movie) => {
+        console.log("movie", movie);
+        //dispatch an action to store the movie to the store
+        dispatch(addMovieToList(movie));
+      });
+  };
+}
+
 export function addMovieToList(movie) {
   return {
     type: ADD_MOVIE_TO_LIST,
