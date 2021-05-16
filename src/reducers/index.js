@@ -10,7 +10,7 @@ const initialMovieState = {
   favourites: [],
   showFav: false,
 };
-export default function movies(state = initialMovieState, action) {
+export function movies(state = initialMovieState, action) {
   // if (action.type === ADD_MOVIES) {
   //   return {
   //     ...state, //using spread operators
@@ -46,4 +46,22 @@ export default function movies(state = initialMovieState, action) {
     default:
       return state;
   }
+}
+
+const initialSeacrhState = {
+  result: {},
+};
+export function search(state = initialSeacrhState, action) {
+  return state;
+}
+
+const initialRootState = {
+  movies: initialMovieState,
+  search: initialSeacrhState,
+};
+export default function rootReducer(state = initialRootState, action) {
+  return {
+    movies: movies(state.movies, action),
+    search: search(state.search, action),
+  };
 }
