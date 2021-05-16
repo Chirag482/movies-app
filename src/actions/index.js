@@ -31,3 +31,15 @@ export function setShowFav(val) {
     val,
   };
 }
+
+export function handleMovieSearch(movie) {
+  const url = `http://www.omdbapi.com/?i=tt3896198&apikey=205c172a&t=${movie}`;
+  return function (dispatch) {
+    fetch(url)
+      .then((response) => response.json())
+      .then((movie) => {
+        console.log("movie", movie);
+        //dispatch an action to store the movie to the store
+      });
+  };
+}
