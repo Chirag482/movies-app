@@ -19,14 +19,22 @@ class Navbar extends React.Component {
     this.setState({
       searchText: e.target.value,
     });
+    if (this.state.searchText !== "") {
+      const { searchText } = this.state;
+      this.props.dispatch(handleMovieSearch(searchText));
+    }
   };
   handleSearch = () => {
-    const { searchText } = this.state;
-    this.props.dispatch(handleMovieSearch(searchText));
+    if (this.state.searchText !== "") {
+      const { searchText } = this.state;
+      this.props.dispatch(handleMovieSearch(searchText));
+    }
+    return;
   };
   render() {
     const { showSearchResults } = this.props.search;
     const { result } = this.props.search;
+    const searchText = this.state.searchText !== "" ? true : false;
 
     console.log("NAVBAR render result=> ", result);
     return (
@@ -37,7 +45,7 @@ class Navbar extends React.Component {
             Search
           </button>
 
-          {showSearchResults && result.Response === "False" && (
+          {showSearchResults && result.Response === "False" && searchText && (
             <div className="search-results">Movie Not Found!!</div>
           )}
           {showSearchResults && result.Response === "True" && (
