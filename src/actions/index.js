@@ -36,7 +36,7 @@ export function setShowFav(val) {
 
 export function handleAddMovieToList(id) {
   console.log(id);
-  const url = `http://www.omdbapi.com/?apikey=205c172a&i=${id}`;
+  const url = `https://www.omdbapi.com/?apikey=205c172a&i=${id}`;
   return function (dispatch) {
     fetch(url)
       .then((response) => response.json())
@@ -56,7 +56,7 @@ export function addMovieToList(movie) {
 }
 
 export function handleMovieSearch(movie) {
-  const url = `http://www.omdbapi.com/?i=tt3896198&apikey=205c172a&s=${movie}`;
+  const url = `https://www.omdbapi.com/?i=tt3896198&apikey=205c172a&s=${movie}`;
   return function (dispatch) {
     fetch(url)
       .then((response) => response.json())
