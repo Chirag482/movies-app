@@ -31,7 +31,7 @@ body {
 }
 .search-results {
   position: absolute;
-  background: #fff;
+  background: rgb(243 251 255);
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #e1e1e1;
@@ -54,12 +54,15 @@ body {
   border: none;
   padding: 9px 0;
   border-radius: 4px;
+  width: 150px;
 }
 .search-result {
   display: flex;
+  flex-direction: row;
 }
 .search-result img {
   height: 150px;
+  width: 150px;
 }
 .search-result > div span {
   font-size: 20px;
@@ -182,4 +185,10 @@ body {
   padding: 20px 0;
   font-size: 20px;
   color: #6d6d6d;
+}
+.not {
+  color: red;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
