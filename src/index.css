@@ -18,21 +18,23 @@ body {
 }
 .search-container input {
   height: 43px;
-  width: 600px;
+  width: 80%;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   border: none;
   font-size: 16px;
   padding: 0 10px;
   box-sizing: border-box;
+  flex-shrink: 2;
 }
 .search-container {
   position: relative;
+  width: 65%;
 }
 .search-results {
   position: absolute;
   background: rgb(243 251 255);
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   border: 1px solid #e1e1e1;
   top: 42px;
@@ -54,7 +56,7 @@ body {
   border: none;
   padding: 9px 0;
   border-radius: 4px;
-  width: 150px;
+  width: 110px;
 }
 .search-result {
   display: flex;
@@ -91,6 +93,7 @@ body {
   border-top-right-radius: 4px;
   position: relative;
   top: -1px;
+  width: 20%;
 }
 .main {
   width: 70%;
@@ -118,42 +121,42 @@ body {
   cursor: pointer;
   background: #e1e1e1;
 }
-.movie-card {
-  background: #fff;
-  padding: 0;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
-  display: flex;
-}
+
 .movie-card:not(:first-child) {
   margin-top: 20px;
 }
 .movie-card:last-child {
   margin-bottom: 50px;
 }
+.movie-card {
+  background: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
+}
 .movie-card .left {
-  flex: 1;
+  width: 100%;
+  display: block;
 }
 .movie-card .left img {
-  height: 250px;
+  height: 300px;
+  width: 100%;
 }
 .movie-card .right {
-  position: relative;
-  flex: 10;
+  width: 100%;
+  display: block;
 }
-.movie-card .title {
+.title {
   padding: 10px 20px;
   font-size: 25px;
   font-weight: 600;
+  text-align: center;
 }
-.movie-card .plot {
-  margin-top: 20px;
+.plot {
   padding: 0 20px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -191,4 +194,66 @@ body {
   display: flex;
   justify-content: center;
   font-weight: bold;
+}
+
+/*Media Queries*/
+@media screen and (min-width: 500px) {
+  .movie-card {
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #f1f1f1;
+    display: flex;
+  }
+  .movie-card .left {
+    flex: 1;
+  }
+  .movie-card .left img {
+    height: 250px;
+    max-width: 200px;
+  }
+  .movie-card .right {
+    position: relative;
+    flex: 2;
+  }
+  .movie-card .title {
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .movie-card .plot {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  .footer .rating {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .footer button {
+    font-size: 15px;
+    padding: 7px 10px;
+    text-shadow: none;
+    border-radius: 3px;
+    border: none;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    width: 90%;
+  }
+  .main {
+    width: 100%;
+  }
 }
