@@ -197,6 +197,7 @@ body {
 }
 
 /*Media Queries*/
+
 @media screen and (min-width: 500px) {
   .movie-card {
     background: #fff;
@@ -248,7 +249,12 @@ body {
     font-weight: 600;
   }
 }
-
+@media screen and (min-width: 900px) {
+  .movie-card .right {
+    position: relative;
+    flex: 3.5;
+  }
+}
 @media screen and (max-width: 600px) {
   .search-container {
     width: 90%;
