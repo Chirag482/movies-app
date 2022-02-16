@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# _Movies App_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Movies listing app including search and favourite/unfavourite functionality
 
-## Available Scripts
+> View this app [here..](https://chirag482.github.io/movies-app/)
 
-In the project directory, you can run:
+> feel free to jump in to contribute
 
-### `yarn start`
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+https://user-images.githubusercontent.com/65730103/154234465-b12b353c-f4bf-4abe-b17e-15468058a16f.mp4
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Basic Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. List of Movies with their IMDB rating
+2. Search Bar
+3. Add Another Movies
+4. Favourite/ Unfavourite Buttons
+5. Seprate Favourite tab
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## How to Install
 
-## Learn More
+> Run this app by directly opening the [Link here](https://chirag482.github.io/movies-app/) or follow steps mentioned below to set up on local directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone this project
+2. Start by installing _npm_ **if you don't have it already**
+3. Navigate to project directory by
+> cd movies-app
+4. run following command to install the dependencies
+> npm install
+5. run following command to start the Project
+> npm start
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Directory Structure
 
-### Code Splitting
+``` /src ``` - all code files
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+``` /src/actions ``` - all Redux Actions creators
 
-### Analyzing the Bundle Size
+``` /src/components ``` - all react components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+``` /src/reducers ``` - all Redux reducers
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```src/data.js ``` - static movies data
